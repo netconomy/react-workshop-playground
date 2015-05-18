@@ -1,0 +1,145 @@
+@import "foundation/components/global";
+@import "select";
+@import "datepicker";
+@import "list";
+
+body {
+    padding: 1rem;
+    background: #fff;
+}
+
+.form-inputs {
+    width: 70%;
+}
+
+.arc path:hover {
+    fill: #E55;
+}
+
+.tooltip {
+    padding: 3px;
+    border: 2px solid;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    opacity: 0.8;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+    max-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    transition: max-height .3s ease-in-out;
+    &.hidden {
+        max-height: 0;
+    }
+}
+
+.left {
+    text-align: left;
+}
+
+.button-group {
+    user-select: none;
+}
+
+.icon-bar {
+    a {
+        user-select: none;
+        padding: .3rem;
+        i {
+            font-size: 1rem;
+        }
+        label {
+            margin-left: .2rem;
+        }
+    }
+}
+
+.nodata {
+    text-align: center;
+    color: #888;
+    div {
+        div {
+            margin-top: .5rem;
+            padding-top: 5rem;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            padding-bottom: 5rem;
+        }
+    }
+}
+
+.text-centered {
+    text-align: center;
+}
+
+.datepicker__input {
+    cursor: pointer;
+}
+
+.top-marg {
+    margin-top: 1rem;
+}
+
+.jql {
+    height: 2.77rem !important;
+}
+
+.cal-icon {
+    position: absolute;
+    right: 2rem;
+    z-index: 10;
+    top: 0.5rem;
+}
+
+.spinner {
+    margin: 100px auto;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    text-align: center;
+
+    -webkit-animation: rotate 2.0s infinite linear;
+    animation: rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #008CBA;
+    border-radius: 100%;
+
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0px;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes rotate { 100% { -webkit-transform: rotate(360deg) }}
+@keyframes rotate { 100% { transform: rotate(360deg); -webkit-transform: rotate(360deg) }}
+
+@-webkit-keyframes bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bounce {
+    0%, 100% { 
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% { 
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
