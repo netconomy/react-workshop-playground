@@ -1,0 +1,38 @@
+.file-listing {
+  .list-row {
+    list-style-type: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    padding-left: .1rem;
+    padding-right: .1rem;
+    padding-bottom: .2rem;
+    padding-top: .3rem;
+    color: #888;
+
+    .num {
+        text-align: right;
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+        background: #eee;
+    }
+
+    &:first-child{
+      border-top: 1px solid #ccc;
+    }
+
+    .task-list {
+        font-size: 0.8rem;
+        a {
+            cursor: auto;
+            padding: 0;
+            display: auto;
+        }
+    }
+  }
+}
+
