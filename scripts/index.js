@@ -7,15 +7,17 @@ import ProductListingPage from './pages/ProductListingPage';
 import Home from './pages/Home';
 import Fluxible from 'fluxible';
 import ProductStore from './stores/ProductStore';
+import Dummy from './pages/Dummy';
 
 const Route = Router.Route,
-    DefaultRoute = Router.DefaultRoute;
+DefaultRoute = Router.DefaultRoute;
 
 
 const routes = (
     <Route handler={App} path="/">
         <DefaultRoute name="home" handler={Home} />
         <Route name="products" handler={ProductListingPage} />
+        <Route name="dummy" handler={Dummy} />
     </Route>
 );
 

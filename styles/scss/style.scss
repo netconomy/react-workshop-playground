@@ -1,99 +1,17 @@
 @import "foundation/components/global";
-@import "select";
-@import "datepicker";
-@import "list";
 
 body {
     padding: 1rem;
     background: #fff;
 }
 
-.form-inputs {
-    width: 70%;
-}
-
-.arc path:hover {
-    fill: #E55;
-}
-
-.tooltip {
-    padding: 3px;
-    border: 2px solid;
-    border-radius: 4px;
-    background-color: #333;
-    color: #fff;
-    opacity: 0.8;
-    justify-content: center;
-    align-items: center;
-}
-
-.nav {
-    max-height: 25rem;
-    width: 100%;
-    overflow: hidden;
-    transition: max-height .3s ease-in-out;
-    &.hidden {
-        max-height: 0;
-    }
-}
-
-.left {
-    text-align: left;
-}
-
-.button-group {
-    user-select: none;
-}
-
-.icon-bar {
-    a {
-        user-select: none;
-        padding: .3rem;
-        i {
-            font-size: 1rem;
-        }
-        label {
-            margin-left: .2rem;
-        }
-    }
-}
-
-.nodata {
+.tile {
     text-align: center;
-    color: #888;
-    div {
-        div {
-            margin-top: .5rem;
-            padding-top: 5rem;
-            background-color: #eee;
-            border: 1px solid #ccc;
-            padding-bottom: 5rem;
-        }
+    small {
+        color: #999;
     }
 }
 
-.text-centered {
-    text-align: center;
-}
-
-.datepicker__input {
-    cursor: pointer;
-}
-
-.top-marg {
-    margin-top: 1rem;
-}
-
-.jql {
-    height: 2.77rem !important;
-}
-
-.cal-icon {
-    position: absolute;
-    right: 2rem;
-    z-index: 10;
-    top: 0.5rem;
-}
 
 .spinner {
     margin: 100px auto;

@@ -5,6 +5,7 @@ import ProductStore from '../stores/ProductStore';
 import ProductList from '../components/ProductList';
 import FluxibleMixin from 'fluxible/addons/FluxibleMixin';
 import GetProductsAction from '../actions/GetProductsAction';
+import Loading from '../components/Loading';
 
 const ProductListingPage = React.createClass({
     mixins: [FluxibleMixin],
@@ -21,22 +22,21 @@ const ProductListingPage = React.createClass({
         };
     },
 
-    _getProducts() {
-        this.executeAction(GetProductsAction);
-    },
-
     render() {
         if (!this.state.page) {
-            return <button onClick={this._getProducts}>get products</button>;
+            return <Loading />;
         }
 
         return (
             <div>
                 <div>Page: {this.state.page.pagination.currentPage}</div>
                 <ProductList products={this.state.page.products} />
-                yay
             </div>
         );
+    },
+
+    componentWillMount() {
+        this.executeAction(GetProductsAction);
     },
 
     _onChange() {

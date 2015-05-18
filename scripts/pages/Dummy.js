@@ -2,19 +2,21 @@
 
 import React from 'react/addons';
 
-const Home = React.createClass({
+const Dummy = React.createClass({
     getInitialState() {
-        return {};
+        return {
+            color: 'red'
+        };
     },
 
     render() {
         return (
             <div>
-                Home
+                Dummy
             </div>
         );
     }
 });
 
-module.exports = Home;
+module.exports = Dummy;
 
