@@ -4,8 +4,13 @@ import React from 'react/addons';
 import App from './App';
 import Router from 'react-router';
 import ProductListingPage from './pages/ProductListingPage';
+import Home from './pages/Home';
 import Fluxible from 'fluxible';
 import ProductStore from './stores/ProductStore';
+
+const Route = Router.Route,
+    DefaultRoute = Router.DefaultRoute;
+
 
 const routes = (
     <Route handler={App} path="/">
@@ -24,9 +29,9 @@ app.registerStore(ProductStore);
 window.context = app.createContext();
 const router = Router.create({
     routes: app.getComponent(),
-    location: Router.HistoryLocation,
+    location: Router.HashLocation
 });
 
 router.run((Handler) => {
-    React.render(<Handler/>, document.getElementById('app'));
+    React.render(<Handler context={window.context.getComponentContext()}/>, document.getElementById('app'));
 });

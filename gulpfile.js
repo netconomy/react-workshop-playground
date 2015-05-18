@@ -5,7 +5,6 @@ var gulp = require('gulp'),
     del = require("del"),
     autoprefixer = require('gulp-autoprefixer'),
     WebpackDevServer = require('webpack-dev-server'),
-    karma = require('karma').server,
     config = require('./webpack.config'),
     webkackProd = require('./webpack.config.production.js'),
     gulpif = require("gulp-if"),
@@ -17,7 +16,7 @@ var gulp = require('gulp'),
 var startServer = function() {
     new WebpackDevServer(webpack(config), {
         publicPath: config.output.publicPath,
-        hot: false
+        hot: true
     }).listen(3000, 'localhost', function (err) {
         if (err) {
             console.log(err);
@@ -25,21 +24,6 @@ var startServer = function() {
         console.log('Listening at localhost:3000');
     });
 };
-
-gulp.task('testonce', function(done) {
-    karma.start({
-        configFile: __dirname + '/karma.conf.js',
-        singleRun: true
-    }, done);
-});
-
-gulp.task('test', function(done) {
-    karma.start({
-        configFile: __dirname + '/karma.conf.js',
-        singleRun: false,
-        autoWatch: true
-    }, done);
-});
 
 gulp.task('default', ['sass'], function() {
     gulp.watch('styles/scss/*.scss', ['sass']);

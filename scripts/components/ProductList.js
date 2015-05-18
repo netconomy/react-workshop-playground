@@ -1,21 +1,18 @@
 'use strict';
 
 import React from 'react/addons';
-import
 
-const App = React.createClass({
-    mixins: [React.addons.PureRenderMixin],
-
+const ProductList = React.createClass({
     render() {
         return (
             <div className='products'>
-                {this.state.page.get('products').map((product) => {
-
+                {this.props.products.map((product) => {
+                    return <div key={product.code}>{product.name}</div>;
                 })}
             </div>
         );
     }
 });
 
-module.exports = App;
+module.exports = ProductList;
 
