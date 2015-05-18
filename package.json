@@ -1,5 +1,5 @@
 {
-  "name": "filefrequency-gui",
+  "name": "react-workshop-playground",
   "version": "0.1.0",
   "dependencies": {
     "fluxible": "^0.4.8",

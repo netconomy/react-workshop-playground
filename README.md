@@ -3,6 +3,9 @@ Playground app for the React Workshop using React, fluxible and react-router.
 
 # Setup
 
-* npm install
-* gulp
-* goto http://localhost:3000/
+```
+> npm install
+> npm install -g gulp
+> gulp
+> goto http://localhost:3000/
+```
