@@ -35,7 +35,7 @@ const ProductListingPage = React.createClass({
         );
     },
 
-    componentWillMount() {
+    componentDidMount() {
         this.executeAction(GetProductsAction);
     },
 
